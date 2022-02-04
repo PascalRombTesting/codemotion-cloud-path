@@ -6,7 +6,8 @@
 	<modules>
 		<module>codemotion-cloud-path-login-service</module>
 		<module>codemotion-cloud-path-movie-service</module>
-	</modules>
+        <module>codemotion-cloud-path-proxy-service</module>
+    </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -25,11 +26,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
 
 		<dependency>

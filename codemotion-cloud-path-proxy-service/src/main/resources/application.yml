@@ -1,0 +1,8 @@
+zuul:
+  routes:
+    movie-service:
+      path: /movie-service/**
+      url: http://localhost:8090/api/v1/
+    login-service:
+      path: /login-service/**
+      url: http://localhost:8070/api/v1/

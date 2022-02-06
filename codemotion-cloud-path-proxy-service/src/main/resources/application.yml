@@ -6,3 +6,5 @@ zuul:
     login-service:
       path: /login-service/**
       url: http://localhost:8070/api/v1/
+authentication:
+  secret: "asdfSFS34wfsdfsdfSDSD32dfsddDDerQSNCK34SOWEK5354fdgdf4"

@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: login-service
+  labels:
+    app: login-service
+spec:
+  replicas: 1
+  minReadySeconds: 15
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: login-service
+      tier: login-service-tier
+  template:
+    metadata:
+      labels:
+        app: login-service
+        tier: login-service-tier
+    spec:
+      containers:
+        - image: rhombusthere/login-service
+          name: login-service
+          ports:
+            - containerPort: 8070
+              name: login-service

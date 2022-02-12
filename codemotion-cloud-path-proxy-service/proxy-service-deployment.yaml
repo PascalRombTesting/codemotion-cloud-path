@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: proxy-service
+  name: proxy-service
+spec:
+  replicas: 1
+  minReadySeconds: 15
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: proxy-service
+      tier: proxy-service-tier
+  template:
+      labels:
+        app: proxy-service
+        tier: proxy-service-tier
+    spec:
+      containers:
+        - env:
+            - name: ZUUL_ROUTES_LOGIN_SERVICE_URL
+              value: http://login-service-lb:8070/api/v1/
+            - name: ZUUL_ROUTES_MOVIE_SERVICE_URL
+              value: http://movie-service-lb:8090/api/v1/
+          image: rhombusthere/proxy-service
+          name: proxy-service
+          ports:
+            - containerPort: 8080
+              name: proxy-service

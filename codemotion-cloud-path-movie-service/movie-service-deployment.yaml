@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: movie-service
+  name: movie-service
+spec:
+  replicas: 2
+  minReadySeconds: 15
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: movie-service
+      tier: movie-service-tier
+  template:
+    metadata:
+      labels:
+        app: movie-service
+        tier: movie-service-tier
+    spec:
+      containers:
+        - image: rhombusthere/movie-service
+          name: movie-service
+          ports:
+            - containerPort: 8090
+              name: movie-service

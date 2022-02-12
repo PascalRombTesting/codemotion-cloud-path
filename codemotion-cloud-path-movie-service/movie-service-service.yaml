@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: movie-service-lb
+spec:
+  type: ClusterIP
+  ports:
+    - name: "8090"
+      port: 8090
+      targetPort: 8090

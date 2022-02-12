@@ -1,4 +1,4 @@
-package com.rhombushthere.codemotioncloudpath.loginservice.swagger;
+package com.rhombusthere.codemotioncloudpath.loginservice.swagger;
 
 
 import org.springframework.context.annotation.Bean;

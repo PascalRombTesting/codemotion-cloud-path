@@ -1,4 +1,4 @@
-package com.rhombushthere.codemotioncloudpath.loginservice.model;
+package com.rhombusthere.codemotioncloudpath.loginservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

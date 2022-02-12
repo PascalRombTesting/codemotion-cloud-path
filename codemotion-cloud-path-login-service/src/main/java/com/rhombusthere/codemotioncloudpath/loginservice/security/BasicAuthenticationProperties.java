@@ -1,7 +1,7 @@
-package com.rhombushthere.codemotioncloudpath.loginservice.security;
+package com.rhombusthere.codemotioncloudpath.loginservice.security;
 
 
-import com.rhombushthere.codemotioncloudpath.loginservice.model.UserBasic;
+import com.rhombusthere.codemotioncloudpath.loginservice.model.UserBasic;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

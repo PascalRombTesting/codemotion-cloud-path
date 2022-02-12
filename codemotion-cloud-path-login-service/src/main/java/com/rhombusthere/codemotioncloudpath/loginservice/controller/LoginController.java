@@ -1,8 +1,8 @@
-package com.rhombushthere.codemotioncloudpath.loginservice.controller;
+package com.rhombusthere.codemotioncloudpath.loginservice.controller;
 
 
-import com.rhombushthere.codemotioncloudpath.loginservice.model.UserBasic;
-import com.rhombushthere.codemotioncloudpath.loginservice.security.BasicAuthenticationProperties;
+import com.rhombusthere.codemotioncloudpath.loginservice.model.UserBasic;
+import com.rhombusthere.codemotioncloudpath.loginservice.security.BasicAuthenticationProperties;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +28,6 @@ public class LoginController {
             return ResponseEntity.ok().build();
         }
 
-        return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
     }
 }

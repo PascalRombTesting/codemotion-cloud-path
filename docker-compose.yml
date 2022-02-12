@@ -1,0 +1,17 @@
+version: "3"
+services:
+  login-service:
+    image: rhombusthere/login-service
+    ports:
+      - 8070:8070
+  movie-service:
+    image: rhombusthere/movie-service
+    ports:
+      - 8090:8090
+  proxy-service:
+    image: rhombusthere/proxy-service
+    ports:
+      - 8080:8080
+    environment:
+      - ZUUL_ROUTES_LOGIN_SERVICE_URL=http://login-service:8070/api/v1/
+      - ZUUL_ROUTES_MOVIE_SERVICE_URL=http://movie-service:8090/api/v1/

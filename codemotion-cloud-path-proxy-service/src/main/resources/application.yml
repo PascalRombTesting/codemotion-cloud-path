@@ -11,4 +11,5 @@ authentication:
   secret: "asdfSFS34wfsdfsdfSDSD32dfsddDDerQSNCK34SOWEK5354fdgdf4"
 logging.level:
   root: warn
-  com.rombusthere.codemotioncloudpath.proxyservice: debug
+  org.springframework.boot.web.embedded.tomcat: info
+  com.rhombusthere.codemotioncloudpath.proxyservice: debug

@@ -11,4 +11,5 @@ spring:
     open-in-view: false
 logging.level:
   root: warn
+  org.springframework.boot.web.embedded.tomcat: info
   com.rhombusthere.codemotioncloudpath.movieservice: debug

@@ -9,4 +9,5 @@ security:
       password: passwordina
 logging.level:
   root: warn
+  org.springframework.boot.web.embedded.tomcat: info
   com.rhombusthere.codemotioncloudpath.loginservice: debug

@@ -14,4 +14,9 @@ public class FilterConfig {
     public PostAuthenticationFilter postFilter() {
         return new PostAuthenticationFilter();
     }
+
+    @Bean
+    public ApiVersionFilter apiVersionFilter(){
+        return new ApiVersionFilter();
+    }
 }

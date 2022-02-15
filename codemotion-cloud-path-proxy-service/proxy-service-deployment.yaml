@@ -17,6 +17,7 @@ spec:
       app: proxy-service
       tier: proxy-service-tier
   template:
+    metadata:
       labels:
         app: proxy-service
         tier: proxy-service-tier
